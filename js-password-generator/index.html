@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body class="body">
+    <!-- Toast Message Notification and Intro -->
+    <div class="password-container">
+      <div class="message-box"></div>
+      <div class="intro">
+        <div class="heading">
+          <h1>Password Generate</h1>
+        </div>
+        <div class="paragraph">
+          <p>Instantly generate a secure, random password from any device</p>
+        </div>
+      </div>
+
+      <!--Password User Input and Buttons-->
+      <div class="password-generator">
+        <div class="password-gen-input-field">
+          <label for="password"></label>
+          <input
+            type="text"
+            name="password"
+            id="password"
+            minlength="12"
+            maxlength="50"
+          />
+        </div>
+        <div class="password-reset">
+          <button type="button" id="regen-password" class="reset-buttom">
+            ⟳
+          </button>
+        </div>
+        <div class="password-copy">
+          <button id="copy-password" class="btn" type="button">
+            Copy Password
+          </button>
+        </div>
+      </div>
+
+      <!--Progress Bar-->
+      <div class="password-progress-bar">
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span class="strength-label" id="strengthLabel"> Weak </span>
+        <div class="progress-pointer"></div>
+      </div>
+
+      <div class="settings-box">
+        <div class="length-section">
+          <div class="length-label">
+            Password Length <span id="lengthValue"></span>
+          </div>
+
+          <input
+            type="range"
+            min="1"
+            max="50"
+            value="1"
+            class="slider"
+            id="lengthSlider"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="index.js"></script>
+</html>
